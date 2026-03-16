@@ -12,8 +12,8 @@ class Fixed
 		void	setRawBits( int const raw );
 
 	private:
-		int					rawBits;
-		static int const	fractionalBits = 8;
+		int					rawBits_;
+		static int const	fractionalBits_ = 8;
 };
 
 #endif
