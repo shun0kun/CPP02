@@ -21,16 +21,16 @@ Fixed	&Fixed::operator=( Fixed const &other )
 	return *this;
 }
 
-Fixed::Fixed( int const raw )
+Fixed::Fixed( int const value )
 {
 	std::cout << "Int constructor called" << std::endl;
-	rawBits_ = raw << fractionalBits_;
+	rawBits_ = value << fractionalBits_;
 }
 
-Fixed::Fixed( float const raw )
+Fixed::Fixed( float const value )
 {
 	std::cout << "Float constructor called" << std::endl;
-	rawBits_ = static_cast<int>( roundf( raw * ( 1 << fractionalBits_ ) ) );
+	rawBits_ = static_cast<int>( roundf( value * ( 1 << fractionalBits_ ) ) );
 }
 
 Fixed::~Fixed()

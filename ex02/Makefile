@@ -1,6 +1,6 @@
 NAME = executable01
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror 
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic-errors
 SRCS = Fixed.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
@@ -20,4 +20,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclena re
+.PHONY: all clean fclean re

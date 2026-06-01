@@ -2,7 +2,7 @@ NAME = excutable03
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic-errors
 SRCS = bsp.cpp Fixed.cpp main.cpp Point.cpp
-OBJS = $(SRCS: .cpp=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 

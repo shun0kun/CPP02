@@ -17,14 +17,14 @@ Fixed	&Fixed::operator=( Fixed const &other )
 	return *this;
 }
 
-Fixed::Fixed( int const raw )
+Fixed::Fixed( int const value )
 {
-	rawBits_ = raw << fractionalBits_;
+	rawBits_ = value << fractionalBits_;
 }
 
-Fixed::Fixed( float const raw )
+Fixed::Fixed( float const value )
 {
-	rawBits_ = static_cast<int>( roundf( raw * ( 1 << fractionalBits_ ) ) );
+	rawBits_ = static_cast<int>( roundf( value * ( 1 << fractionalBits_ ) ) );
 }
 
 Fixed::~Fixed()
@@ -159,7 +159,7 @@ Fixed	operator*( Fixed const &lhs, Fixed const &rhs )
 {
 	Fixed res;
 
-	res.setRawBits( static_cast<int>( static_cast<long long>( lhs.getRawBits() ) * rhs.getRawBits() / (1 << Fixed::getFractionalBits()) ) );
+	res.setRawBits( static_cast<int>( static_cast<long>( lhs.getRawBits() ) * rhs.getRawBits() / (1 << Fixed::getFractionalBits()) ) );
 	return res;
 }
 
@@ -168,7 +168,7 @@ Fixed	operator/( Fixed const &lhs, Fixed const &rhs )
 {
 	Fixed res;
 
-	res.setRawBits( static_cast<int>( static_cast<long long>( lhs.getRawBits() ) * ( 1 << Fixed::getFractionalBits() ) / rhs.getRawBits() ) );
+	res.setRawBits( static_cast<int>( static_cast<long>( lhs.getRawBits() ) * ( 1 << Fixed::getFractionalBits() ) / rhs.getRawBits() ) );
 	return res;
 }
 

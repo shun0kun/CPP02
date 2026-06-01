@@ -1,6 +1,6 @@
 NAME = executable00
-CXX = g++
-CXXFLAGS = -Wall -Wextra -Werror
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic-errors
 SRCS = Fixed.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 

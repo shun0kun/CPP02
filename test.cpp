@@ -3,8 +3,9 @@
 
 int	main()
 {
-	float	n = 42.42f;
+	std::cout << sizeof(int) << std::endl;
+	std::cout << sizeof(long) << std::endl;
+	std::cout << sizeof(long long) << std::endl;
 
-	printf("%f\n", n);
 	return 0;
 }
