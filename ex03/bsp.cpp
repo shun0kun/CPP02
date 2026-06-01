@@ -1,6 +1,6 @@
 #include "Point.hpp"
 
-bool bsp( Point const a, Point const b, Point const c, Point const point )
+bool	bsp( Point const a, Point const b, Point const c, Point const point )
 {
 	Fixed c1 = ( b - a ) ^ ( point - a );
 	Fixed c2 = ( c - b ) ^ ( point - b );

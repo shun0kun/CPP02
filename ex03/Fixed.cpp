@@ -171,4 +171,3 @@ Fixed	operator/( Fixed const &lhs, Fixed const &rhs )
 	res.setRawBits( static_cast<int>( static_cast<long>( lhs.getRawBits() ) * ( 1 << Fixed::getFractionalBits() ) / rhs.getRawBits() ) );
 	return res;
 }
-
