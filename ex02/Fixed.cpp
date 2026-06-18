@@ -163,7 +163,6 @@ Fixed	operator*( Fixed const &lhs, Fixed const &rhs )
 	return res;
 }
 
-// 0除算を弾くのもあり。
 Fixed	operator/( Fixed const &lhs, Fixed const &rhs )
 {
 	Fixed res;
