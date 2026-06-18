@@ -8,7 +8,6 @@ class Point
 	public:
 		Point();
 		Point( Point const &other );
-		Point( int const x, int const y );
 		Point( float const x, float const y );
 		Point( Fixed const &x, Fixed const &y );
 		Point	&operator=( Point const &other );

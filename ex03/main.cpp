@@ -10,7 +10,7 @@ int	main()
 	Point	a[n_tests] = {Point(0, 0)};
 	Point	b[n_tests] = {Point(2, 0)};
 	Point	c[n_tests] = {Point(1, 2)};
-	Point	point[n_tests] = {Point(1, 1)};
+	Point	point[n_tests] = {Point(0.5,1.0)};
 	bool	expected[n_tests] = {true};
 
 	std::cout << "expected, actual" << std::endl;
